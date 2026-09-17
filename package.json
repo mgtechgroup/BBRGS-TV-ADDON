@@ -1,0 +1,32 @@
+{
+  "name": "bbrgs-tv-addon",
+  "version": "1.0.0",
+  "description": "BBRGS TV - +18 Stremio streaming addon with catalog, search, metadata and multiple stream sources",
+  "main": "addon.js",
+  "scripts": {
+    "start": "node addon.js",
+    "dev": "nodemon addon.js",
+    "test": "node --test test/",
+    "docker:build": "docker build -t bbrgs-tv-addon .",
+    "docker:run": "docker run -p 8080:8080 --env-file .env bbrgs-tv-addon"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "stremio",
+    "addon",
+    "streaming",
+    "bbrgs"
+  ],
+  "author": "MG Tech Group",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
